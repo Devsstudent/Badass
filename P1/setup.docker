@@ -1,0 +1,13 @@
+sudo usermode -a -G docker badass # To allow badass user to use docker without sudo NEED REBOOT
+docker pull frrouting/frr
+docker pull alpine
+docker run -d frrouting/frr:latest
+docker exec -it "name" bash
+# edit /etc/frr/daemons to enable bgpd ospfd isisd
+# apk add iproute2
+# alias ip=/sbin/ip
+# leave the docker
+docker commit "name" gns3
+# Then we can use the image in gns3 as our frrrouting "machine router"
+# And the alpine is ready to import.
+
